@@ -1,38 +1,32 @@
-
-let display = document.getElementById('display');
+let display = document.getElementById("display");
 
 // Append number or operator to the display
 function appendToDisplay(value) {
-
     display.value += value;
 }
 
 // Clear the entire display
 function clearDisplay() {
-
-    display.value = '';
+    display.value = "";
 }
 
 // Delete the last character from the display
 function deleteLast() {
-
     display.value = display.value.slice(0, -1);
 }
 
 // Calculate and show the result
 function calculateResult() {
-
     try {
         display.value = eval(display.value);
     } catch (error) {
-        display.value = 'Error';
+        display.value = "Error";
     }
 }
 
 function runSquareRoot() {
     const v = calculateSquareRoot(display.value);
     display.value = v;
-    
 }
 
 function runSquare() {
@@ -48,5 +42,7 @@ function runReciprocal() {
 }
 
 // TODO: Implement run your functions here
-
-
+document.addEventListener("keydown", e => {
+    const keyName = e.key;
+    if (keyName === "c") clearDisplay();
+});
