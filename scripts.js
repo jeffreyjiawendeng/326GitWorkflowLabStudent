@@ -42,7 +42,27 @@ function runReciprocal() {
 }
 
 // TODO: Implement run your functions here
+// keyboard support
 document.addEventListener("keydown", e => {
     const keyName = e.key;
-    if (keyName === "c") clearDisplay();
+    switch (keyName) {
+        case "c":
+            clearDisplay();
+            break;
+        case "Backspace":
+            deleteLast();
+            break;
+        case "Enter":
+            calculateResult();
+            break;
+        case "t":
+            runSquareRoot();
+            break;
+        case "s":
+            runSquare();
+            break;
+        case "r":
+            runReciprocal();
+            break;
+    }
 });
