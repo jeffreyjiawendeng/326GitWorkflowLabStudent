@@ -41,6 +41,29 @@ function runReciprocal() {
     display.value = v;
 }
 
+function runNaturalLog() {
+    const v = naturalLog(parseFloat(display.value));
+    display.value = v;
+}
+
+// Execute sine calculation
+function runSine() {
+    const v = sine(parseFloat(display.value));
+    display.value = v;
+}
+
+// Execute cosine calculation
+function runCosine() {
+    const v = cosine(parseFloat(display.value));
+    display.value = v;
+}
+
+// Execute tangent calculation
+function runTangent() {
+    const v = tangent(parseFloat(display.value));
+    display.value = v;
+}
+
 // TODO: Implement run your functions here
 // keyboard support
 document.addEventListener("keydown", e => {
